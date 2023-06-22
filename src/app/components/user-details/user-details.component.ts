@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app-state';
 import * as fromPostsAction from '../../store/posts/posts.actions';
 import * as fromPostsSelector from '../../store/posts/postsReducer';
-import { Observable, tap } from 'rxjs';
+import { Observable, delay, tap } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { PostsModel } from 'src/app/models/postsModel';
 
@@ -36,7 +36,9 @@ export class UserDetailsComponent implements OnInit {
       
     }, 1000)
 
-    this.route.params.subscribe({
+    
+    this.route.params
+    .subscribe({
       next: (res: any) => {
         this.store.dispatch(fromPostsAction.LoadPost({payload:res.id}));
       } 
@@ -55,7 +57,7 @@ export class UserDetailsComponent implements OnInit {
     
     this.loadPosts$
     .subscribe({
-      next: (value: any) =>  {
+      next: (value: PostsModel[]) =>  {
         this.user = value
         let arr1 = this.user.filter((filter) => filter.author.username == this.post2.author.username)
         this.userPosts = arr1

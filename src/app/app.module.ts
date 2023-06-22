@@ -9,19 +9,15 @@ import { appEffects, appReducer} from './store/app-state';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
-import { RouterModule } from '@angular/router';
-import { EncurtarPipe } from './encurtar.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EncurtarPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule,
     HttpClientModule,
     StoreModule.forRoot(appReducer),
     EffectsModule.forRoot(appEffects),

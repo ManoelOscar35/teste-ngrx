@@ -4,8 +4,8 @@ import { PostsModel } from "src/app/models/postsModel";
 
 export interface PostsState{
     posts: PostsModel[];
-    post: PostsModel | null
-    error: string | ''
+    post: PostsModel | null;
+    error: string | '';
 }
 
 export const initialState: PostsState = {
@@ -38,7 +38,7 @@ const getPostsFeatureState = createFeatureSelector<PostsState>(
 
 export const getPosts = createSelector(
     getPostsFeatureState,
-    (state: any) => state.posts
+    (state: PostsState) => state.posts
 )
 
 export const getPost = createSelector(
