@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div *ngIf="(post$ | async) as post">
+        <img [src]="post.image">
+        <div class="relative">
+          <p routerLink="/post-list" style="cursor: pointer;">Go back to post list</p>
+          <p class="fs-4">{{post.title}}</p>
+          <p>Written by: <a style="cursor: pointer; color: white;" (click)="user(post.id)">{{post.author.username}}</a></p>
+          <p>{{post.comments.length}} comments</p>
+        </div>
+        <p class="relative-body">{{post.body}}</p>
+        <h3 class="comments-container-relative">Comments:</h3>
+        <mat-list class="list" *ngFor="let c of post.comments">
+          <mat-list-item lines="3">
+              <span matListItemTitle>{{c.author.username}}</span>
+              <p>{{c.author.job}}</p>
+          </mat-list-item>
+          <p class="comment">{{c.comment}}</p>
+        </mat-list>
+      </div>
+    </div>
+  </div>
+</div>

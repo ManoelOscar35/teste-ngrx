@@ -1,0 +1,51 @@
+.container {
+    height: 100vh;
+    width: 1000px;
+
+    .topo {
+        color: gray;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .topo-link {
+        float: right;
+        position: relative;
+        bottom: 50px
+    }
+
+    .posts-card {
+        max-width: 470px;
+        margin-bottom: 8px;
+        height: 170px;
+    }
+    
+    .conteudo {
+        position: relative;
+        top: -78px;
+        left: 120px;
+        display: flex;
+        flex-direction: row;
+        font-size: 13px;
+        color:gray;
+        width: 370px;
+    }
+    
+    .btn {
+        position: relative;
+        top: 40px;
+        right: 80px;
+        width: 90px;
+    }
+    
+    img {
+        margin-right: 10px;
+        height: 135px;
+    }
+
+    .comment {
+        margin-left: 15px;
+    }
+
+}
+

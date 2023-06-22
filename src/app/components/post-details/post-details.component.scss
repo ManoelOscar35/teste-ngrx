@@ -1,0 +1,48 @@
+.container {
+    height: 100vh;
+    width: auto;
+
+    .relative {
+        color: white;
+        position: relative;
+        top: -280px;
+        left: 80px;
+        margin-left: 20px;
+    }
+    
+    .relative-body {
+        position: relative;
+        top: -80px;
+        width: 1000px;
+        margin-left: 70px;
+    }
+    
+    .list {
+        max-width: 500px;
+        position: relative;
+        top: -60px;
+        left: 70px
+    }
+
+    .comment {
+        width: 1000px;
+    }
+
+    .comments-container-relative {
+        position: relative;
+        top: -40px;
+        left: 70px
+    }
+
+    img {
+        height: 300px; 
+        width: 1000px;
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+

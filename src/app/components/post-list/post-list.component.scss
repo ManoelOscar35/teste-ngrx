@@ -1,0 +1,28 @@
+.posts-card {
+    max-width: 570px;
+    margin-bottom: 8px;
+    height: 170px;
+}
+
+.conteudo {
+    position: relative;
+    top: -78px;
+    left: 120px;
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    color:gray;
+    width: 370px;
+}
+
+.btn {
+    position: relative;
+    top: 40px;
+    right: 70px;
+    width: 90px;
+}
+
+img {
+    margin-right: 10px;
+    height: 135px;
+}

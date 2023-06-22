@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-4" *ngFor="let post of postsLista$ | async">
+      <mat-card class="posts-card">
+        <mat-card-header>
+          <img mat-card-md-image [src]="post.image" class="img-fluid">
+          <mat-card-title-group>
+            <mat-card-title>{{post.title}}</mat-card-title>
+            <mat-card-subtitle>By: {{post.author.username}}</mat-card-subtitle>
+          </mat-card-title-group>  
+        </mat-card-header>
+        <mat-card-content class="conteudo">
+            {{post.body | shortener}}
+            <button mat-raised-button color="primary" class="btn" (click)="lerPost(post.id);">Read</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+  
